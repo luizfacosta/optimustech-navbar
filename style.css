@@ -1,0 +1,101 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #101828;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* necessário para centralização do menu */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 72px;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+}
+
+/* MENU CENTRALIZADO PERFEITAMENTE */
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #667085;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #8E2424;
+}
+
+/* BOTÕES */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  text-decoration: none;
+  font-size: 14px;
+  color: #667085;
+  transition: color 0.2s ease;
+}
+
+.login:hover {
+  color: #8E2424;
+}
+
+.btn {
+  background-color: #8E2424;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #7a1f1f;
+}
