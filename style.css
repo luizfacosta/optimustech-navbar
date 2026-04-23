@@ -1,101 +1,126 @@
-/* RESET */
+/* 1. VARIÁVEIS */
+:root {
+  --cor-principal: #8E2424;
+  --cor-principal-hover: #7a1f1f;
+  --cor-texto-escuro: #101828;
+  --cor-texto-cinza: #667085;
+  --cor-borda: #f2f4f7;
+  --branco: #ffffff;
+  --espacamento-secao: 96px;
+}
+
+/* 2. RESET E BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #101828;
+  background-color: var(--branco);
+  color: var(--cor-texto-escuro);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER */
+/* 3. HEADER */
 .header {
   width: 100%;
-  border-bottom: 1px solid #f2f4f7;
+  border-bottom: 1px solid var(--cor-borda);
+  background-color: var(--branco);
 }
 
-/* CONTAINER */
 .container {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 18px 32px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative; /* necessário para centralização do menu */
+  position: relative;
 }
 
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo img {
-  height: 72px;
-}
-
-.logo span {
-  font-size: 18px;
-  font-weight: 600;
-  color: #101828;
-}
-
-/* MENU CENTRALIZADO PERFEITAMENTE */
 .nav {
+  display: flex;
+  gap: 32px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-  display: flex;
-  gap: 32px;
 }
 
 .nav a {
   text-decoration: none;
-  font-size: 14px;
-  color: #667085;
-  transition: color 0.2s ease;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cor-texto-cinza);
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #8E2424;
+  color: var(--cor-principal);
 }
 
-/* BOTÕES */
+.logo img {
+  height: 40px;
+  display: block;
+}
+
 .actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .login {
   text-decoration: none;
-  font-size: 14px;
-  color: #667085;
-  transition: color 0.2s ease;
-}
-
-.login:hover {
-  color: #8E2424;
+  color: var(--cor-texto-cinza);
+  font-weight: 500;
+  padding: 10px 18px;
 }
 
 .btn {
-  background-color: #8E2424;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
+  background-color: var(--cor-principal);
+  color: var(--branco);
   text-decoration: none;
-  transition: background 0.2s ease;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #7a1f1f;
+  background-color: var(--cor-principal-hover);
+}
+
+/* 4. SEÇÃO SOBRE (MISSÃO DE HOJE) */
+.sobre {
+  padding: var(--espacamento-secao) 20px;
+  text-align: center;
+}
+
+.container-central {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.sobre__tagline {
+  display: block;
+  color: var(--cor-principal);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.sobre__titulo {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--cor-texto-escuro);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.sobre__descricao {
+  font-size: 18px;
+  color: var(--cor-texto-cinza);
+  line-height: 1.6;
 }
