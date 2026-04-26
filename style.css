@@ -1,7 +1,8 @@
-/* 1. VARIÁVEIS (CENTRALIZAÇÃO DE CORES) */
+/* 1. VARIÁVEIS */
 :root {
     --cor-principal: #8E2424;
     --cor-principal-hover: #7a1f1f;
+    --cor-tagline-bg: #FEF3F3; /* Fundo do badge do Dia 4 */
     --cor-texto-escuro: #101828;
     --cor-texto-cinza: #667085;
     --cor-borda: #f2f4f7;
@@ -20,7 +21,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--branco);
     color: var(--cor-texto-escuro);
-    -webkit-font-smoothing: antialiased;
 }
 
 /* 3. COMPONENTES REUTILIZÁVEIS */
@@ -30,11 +30,16 @@ body {
     padding: 0 32px;
 }
 
+.container-central {
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center; /* Centraliza todo o conteúdo interno */
+}
+
 /* 4. HEADER (DIA 1) */
 .header {
     width: 100%;
     border-bottom: 1px solid var(--cor-borda);
-    background-color: var(--branco);
 }
 
 .header__container {
@@ -42,15 +47,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
 }
 
 .nav {
     display: flex;
     gap: 32px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .nav a {
@@ -58,7 +59,6 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: var(--cor-texto-cinza);
-    transition: 0.3s;
 }
 
 .nav a:hover {
@@ -67,19 +67,16 @@ body {
 
 .logo img {
     height: 40px;
-    display: block;
 }
 
 .actions {
     display: flex;
-    align-items: center;
     gap: 12px;
 }
 
 .login {
     text-decoration: none;
     color: var(--cor-texto-cinza);
-    font-weight: 500;
     padding: 10px 18px;
 }
 
@@ -87,25 +84,13 @@ body {
     background-color: var(--cor-principal);
     color: var(--branco);
     text-decoration: none;
-    font-weight: 500;
     padding: 10px 18px;
     border-radius: 8px;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: var(--cor-principal-hover);
-}
-
-/* 5. SEÇÃO SOBRE (DIA 2) */
+/* 5. SEÇÃO SOBRE (DIA 2) E TIPOGRAFIA COMUM */
 .sobre {
     padding: 96px 20px;
-    text-align: center;
-}
-
-.container-central {
-    max-width: 768px;
-    margin: 0 auto;
 }
 
 .sobre__tagline {
@@ -119,9 +104,7 @@ body {
 .sobre__titulo {
     font-size: 36px;
     font-weight: 600;
-    color: var(--cor-texto-escuro);
     margin-bottom: 20px;
-    letter-spacing: -0.02em;
 }
 
 .sobre__descricao {
@@ -144,7 +127,7 @@ body {
 
 .metrica__item {
     flex: 1;
-    text-align: left; /* Conforme a imagem de referência */
+    text-align: left;
 }
 
 .metrica__numero {
@@ -152,11 +135,9 @@ body {
     font-size: 60px;
     font-weight: 600;
     margin-bottom: 12px;
-    letter-spacing: -0.02em;
 }
 
 .metrica__titulo {
-    color: var(--cor-texto-escuro);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -166,4 +147,32 @@ body {
     color: var(--cor-texto-cinza);
     font-size: 16px;
     line-height: 24px;
+}
+
+/* 7. SEÇÃO TALENTOS (DIA 4) */
+.talentos {
+    padding: 96px 20px;
+    background-color: var(--branco);
+}
+
+.talentos__badge {
+    display: inline-block;
+    background-color: var(--cor-tagline-bg);
+    color: var(--cor-principal);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.talentos__imagem {
+    margin-top: 64px;
+    width: 100%;
+}
+
+.talentos__imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* Cantos arredondados conforme imagem */
 }
