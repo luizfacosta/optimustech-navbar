@@ -217,6 +217,53 @@ body {
     font-size: 16px;
 }
 
+/* 9. SEÇÃO DE DEPOIMENTOS (DIA 6) */
+.depoimento {
+    background-color: var(--cinza-claro-bg);
+    padding: 96px 0;
+}
+
+.depoimento__tagline {
+    color: var(--cor-principal);
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.depoimento__texto {
+    color: var(--cor-texto-escuro);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.depoimento__perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.depoimento__nome {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.depoimento__cargo {
+    color: var(--cor-texto-cinza);
+    font-size: 16px;
+    margin-top: 4px;
+}
 
 
 
