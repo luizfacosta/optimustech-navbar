@@ -176,3 +176,48 @@ body {
     height: auto;
     border-radius: 12px; /* Cantos arredondados conforme imagem */
 }
+/* 8. SEÇÃO DE VAGAS (DIA 5) */
+.vagas {
+    padding-bottom: 96px;
+}
+
+.vagas__categoria {
+    margin-top: 64px;
+    text-align: left; /* Alinhamento à esquerda para as listas de vagas */
+}
+
+.vagas__categoria-titulo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.vaga {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.vaga:last-child {
+    border-bottom: none; /* Remove a linha da última vaga de cada grupo */
+}
+
+.vaga__titulo {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.vaga__info {
+    display: flex;
+    gap: 24px;
+    color: var(--cor-texto-cinza);
+    font-size: 16px;
+}color: var(--cor-texto-cinza);
+    font-size: 16px;
+}
+
+
+
+
+
